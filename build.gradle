@@ -16,18 +16,17 @@ dependencies {
 	// Spring WEB
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	
-	// JPA
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//Mongo DB
+	compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: '3.1.1'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.4.0'
 	
-	// H2 - Hibernate
-	runtimeOnly 'com.h2database:h2'
-	
-	// https://mvnrepository.com/artifact/org.projectlombok/lombok
-	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.16'
+	//Lombok
+	compileOnly 'org.projectlombok:lombok:1.18.16'
+	annotationProcessor 'org.projectlombok:lombok:1.18.16'
 	
 	// OpenAPI - Swagger-UI
 	compile group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.4.8'
-
+	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
